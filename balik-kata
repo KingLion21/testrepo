@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class BalikKata {
+
+    public static void main (String [] Args){
+        Scanner bisa = new Scanner(System.in);
+        System.out.print("Masukkan nama Anda\t: ");
+        String nama = bisa.nextLine();
+        System.out.print("Panjang karakter\t: " + nama.length()+"\n");
+        System.out.print("Nama Anda adalah\t: ");
+            for (int e=0; e<nama.length(); e++ ){
+                System.out.print(nama.charAt(e) + " ");
+            }
+            System.out.println(" ");
+
+        System.out.print("Data urutan\t\t: ");
+            for (int a = 1; a<=nama.length(); a++){
+                System.out.print(a + " ");
+            }
+            System.out.println("");
+            System.out.print("Data Balikan\t\t: ");
+                for (int c = nama.length()-1; c>= 0; c--){
+                     System.out.print(nama.charAt(c));
+                }
+            System.out.println("");
+            System.out.print("Data Acak\t\t: ");
+                for (int d = nama.length()/4-1; d>=0; d--){
+                    System.out.print(nama.charAt(d));
+                }
+                for (int b = nama.length()/4; b<=nama.length()/2-1; b++){
+                    System.out.print(nama.charAt(b));
+                }
+                for (int f = nama.length()*3/4-1; f>=nama.length()/2 ; f--){
+                    System.out.print(nama.charAt(f));
+                }
+                for (int g = nama.length()-1; g>=nama.length()*3/4; g--){
+                    System.out.print(nama.charAt(g));
+                }
+    }
+}
